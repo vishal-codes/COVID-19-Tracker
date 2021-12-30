@@ -51,7 +51,7 @@ function App() {
   const onCountryChange = async (event) => {
     const countryId = event.target.value;
     setCountry(countryId);
-    const url = countryId === "global" ? 'https://disease.sh/v3/covid-19/all' : `https://disease.sh/v3/covid-19/countries/${countryId}`;
+    const url = countryId === "global" ? 'https://disease.sh/v3/covid-19/all' : `https://disease.sh/v3/covid-19/countries/${countryId}?yesterday=true&strict=true`;
     await fetch(url)
       .then(response => response.json())
       .then(data => {
