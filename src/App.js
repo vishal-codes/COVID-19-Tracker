@@ -81,7 +81,7 @@ function App() {
   
         <div className="app_left_stats">
           <InfoBox
-            onClick={e => setCasesType('cases')}
+            onClick={() => setCasesType('cases')}
             active={casesType === 'cases'}
             title="Todays Cases"
             cases={prettyPrintStat(countryInfo.todayCases)}
@@ -89,14 +89,14 @@ function App() {
           />
           <InfoBox
             green
-            onClick={e => setCasesType('recovered')}
+            onClick={() => setCasesType('recovered')}
             active={casesType === 'recovered'}
             title="Recovered Today"
             cases={prettyPrintStat(countryInfo.todayRecovered)}
             total={prettyPrintStat(countryInfo.recovered)}
           />
           <InfoBox
-            onClick={e => setCasesType('deaths')}
+            onClick={() => setCasesType('deaths')}
             active={casesType === 'deaths'}
             title="Deaths Today"
             cases={prettyPrintStat(countryInfo.todayDeaths)}
